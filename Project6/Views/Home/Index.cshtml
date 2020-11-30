@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Compute Monthly Payments";
+}
+
+<div class="jumbotron">
+    <h1>Mortgage Monthly Payment Calculator</h1>
+</div>
+
+<div class="jumbotron">
+    <form>
+        <div class="form-group">
+            <label for="princ">Principle</label>
+            <input type="number" class="form-control" id="princ" required>
+        </div>
+        <div class="form-group">
+            <label for="rate">Interest Rate</label>
+            <input type="number" class="form-control" id="rate" required>
+        </div>
+        <div class="form-group">
+            <label for="dur">Duration in Years</label>
+            <input type="number" class="form-control" id="dur" required>
+        </div>
+        <button type="submit" class="btn btn-primary" id="compute" onclick="Confirm()">Compute</button>
+    </form>
+</div>
+
+<a class="btn btn-secondary" href="/Home/About" role="button">Back to List</a>
