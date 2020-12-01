@@ -7,20 +7,20 @@
 </div>
 
 <div class="jumbotron">
-    <form>
+    <form action="/Home/Index" method="post">
         <div class="form-group">
             <label for="princ">Principle</label>
-            <input type="number" class="form-control" id="princ" required>
+            <input type="number" class="form-control" name="princ" id="princ" required>
         </div>
         <div class="form-group">
             <label for="rate">Interest Rate</label>
-            <input type="number" class="form-control" id="rate" required>
+            <input type="number" class="form-control" name="rate" id="rate" required>
         </div>
         <div class="form-group">
             <label for="dur">Duration in Years</label>
-            <input type="number" class="form-control" id="dur" required>
+            <input type="number" class="form-control" name="dur" id="dur" required>
         </div>
-        <button type="submit" class="btn btn-primary" id="compute" onclick="Confirm()">Compute</button>
+        <button type="submit" class="btn btn-primary" id="compute">Compute</button>
     </form>
 </div>
 

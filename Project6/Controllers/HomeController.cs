@@ -15,6 +15,8 @@ namespace Project6.Controllers
 
         public ActionResult About()
         {
+            //string content = System.IO.File.ReadAllText(Server.MapPath(~/App_Data/PageContext.txt));
+            
             return View();
         }
 
@@ -24,9 +26,21 @@ namespace Project6.Controllers
         }
 
         [HttpPost]
-        public ActionResult Confirm()
+        public ActionResult Index(float princ, float rate, float dur)
         {
-            return View();
+            Response.StatusCode = 200;
+            Response.StatusDescription = "ok";
+
+            String content = "The principle of $" + princ +
+                " with an interest rate of " + rate +
+                "% for " + dur + " has a monthly payment of _.";
+
+            return new ContentResult()
+            {
+                Content = content,
+                ContentEncoding = System.Text.Encoding.ASCII,
+                ContentType = "text/html"
+            };
         }
     }
 }
